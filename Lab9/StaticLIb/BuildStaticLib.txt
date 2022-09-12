@@ -1,0 +1,9 @@
+step 1:
+Compile the library file into .o file 
+use gcc -o to generate the executable file (if .o file exist, this step can be ignored)
+
+step 2:
+Build static libraries from .o files using ar commend
+(In linux system static libraries are .a files)
+
+step 3:

@@ -1,0 +1,19 @@
+# Using functions
+SRC_DIR = ./src 
+SOURCE = $(wildcard $(SRC_DIR)/*.cpp)
+OBJS = $(patsubst %.cpp, %.o, $(SOURCE))
+TARGET = testfiles
+INCLUDE = -I./inc 
+#-I就是在file folder当中搜索文件
+
+CC = g++
+CFLAGES = -c -Wall
+
+$(TARGET) : $(OBJS)
+	$(CC) -o $@ $(OBJS)
+%.o : %.cpp
+	%(CC) $(CFLAGES) $< -o $@ $(INCLUDE)
+
+.PHONY : clean
+clean:
+	rm -f $(SRC_DIR)/*.o$(TARGET)

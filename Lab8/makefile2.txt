@@ -1,0 +1,30 @@
+#Using several ruls and sveral targets
+
+CC = g++
+targets = testfiles
+# OBJ = main.o printinfo.o factorial.o
+# 搜索所有的.cpp文件，return to SRC
+SRC = $(wildcard ./*.cpp)
+OBJ = $(patsubst %.cpp, %.o,$(SRC))
+target:
+	@echo $(SRC)
+	@echo $(OBJ)
+#option pass to the compiler
+# -c generates the object file
+# -Wall display compiler warning
+# $@ Object Files
+# $^ 所有先决条件文件
+
+CFLAGES = -c -Wall
+
+$(targets) : $ (OBJ)
+	$(CC) -o $@ $(OBJ)
+
+# 这是一个规则：所有.o文件来自于.cpp文件
+
+%.o : %.cpp
+	$(CC) $(CFLAGES) $< -o $@
+
+.PHONY : clean
+clean:
+	rm -f *.o $(targets)

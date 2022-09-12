@@ -1,0 +1,22 @@
+# Since testfile target is in the first, it is the default target
+# and will be run when we run make 
+
+#testfile: main.cpp printinfo.cpp factorial.cpp
+#	g++ -o testfile main.cpp printinfo.cpp factorial.cpp
+
+#Using variables in makefiles
+CC = g++
+target = testfile
+OBJ = main.o printinfo.o factorial.o
+$(target) : $(OBJ)
+	$(CC) -o $(target) $(OBJ)
+#This will compile and link the source file one by one
+
+main.o : main.cpp
+	$(CC) -c main.cpp
+
+printinfo.o : printinfo.cpp
+	$(CC) -c printinfo.cpp
+
+factorial.o : factorial.o
+	$(CC) -c factorial.cpp

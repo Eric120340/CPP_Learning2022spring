@@ -1,0 +1,1 @@
+gcc -shared -o lib库名.so add.o sub.o div.o

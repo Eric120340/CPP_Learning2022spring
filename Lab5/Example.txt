@@ -1,0 +1,2 @@
+This is an example of writing a string to a file.
+Hello Dbq!

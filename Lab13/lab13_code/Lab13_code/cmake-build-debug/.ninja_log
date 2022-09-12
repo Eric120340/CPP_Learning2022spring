@@ -1,0 +1,6 @@
+# ninja log v5
+1	593	1653554761283488453	CMakeFiles/Lab13.dir/CStereoShape.cpp.o	dece3d6192dc0378
+0	595	1653554761282869440	CMakeFiles/Lab13.dir/main.cpp.o	dbfc87bb08559bca
+1	607	1653554761300653137	CMakeFiles/Lab13.dir/CCube.cpp.o	d8a49ec44801dc77
+1	636	1653554761329798336	CMakeFiles/Lab13.dir/CSphere.cpp.o	3b93e9ae17d1e84e
+636	681	1653554761375222095	Lab13	7491edf69e954fdb
